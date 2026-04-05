@@ -115,7 +115,8 @@ Using two fundamentally different algorithms (*centroid-based* vs *hierarchical*
 
 t-SNE was applied to the 50-dimensional LSA vectors to produce a 2-dimensional projection for visual inspection. The resulting scatter plot, saved as `cluster_viz.png`, confirms meaningful spatial separation between cluster regions, corroborating the quantitative validation results.
 
-![cluster_viz.png](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F22185173%2F592c16fce79db6984b9414d869b53272%2Fcluster_viz.png?generation=1775413239284942&alt=media)
+<img width="600" height="500" alt="cluster_viz" src="https://github.com/user-attachments/assets/2ca5c29c-6fca-433a-9ad9-4623d14e3719" />
+
 
 ### f) Cluster Interpretation
 
