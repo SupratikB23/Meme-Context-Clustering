@@ -14,7 +14,7 @@ The goal: cluster `5,819` meme descriptions into meaningful, human-interpretable
 
 ---
 
-## Dataset Description
+## 1. Dataset Description
 
 The competition dataset comprises 5,819 meme records, each described by three fields.
 
@@ -184,19 +184,7 @@ Every component of this pipeline is fully reproducible:
 - `output.txt` generated **programmatically** from the notebook
 ---
 
-## 7. Deliverables
-
-| File | Description |
-|------|-------------|
-| `meme_clustering.ipynb` | Full reproducible pipeline notebook |
-| `output.txt` | Cluster listings + per-meme reasoning + methodology + pitch |
-| `report.txt` | Approach report |
-| `vectorizer.pkl` | Trained TF-IDF vectorizer |
-| `cluster_model.pkl` | Trained K-Means model |
-
----
-
-## 8. Future Directions
+## 7. Future Directions
 
 The following improvements are proposed conceptually. Here's what an unconstrained v2.0 could look like:
 
@@ -233,13 +221,17 @@ A semi-supervised approach where domain experts label a seed set of **50–100 m
 ## Repository Structure
 ```
 Meme Context Clustering
-├── models/ 
-    ├── vectorizer.pkl
-    └── cluster_model.pkl
 ├── NOTICE
-├── README.md 
-├── report.txt 
-└── LICENSE 
+├── README.md
+├── LICENSE
+├── data/ 
+    └── meme.csv           -> Original Data
+├── models/ 
+    ├── vectorizer.pkl     -> Trained TF-IDF vectorizer
+    └── cluster_model.pkl  -> Trained K-Means model
+├── report.txt             -> Whole Approach report
+├── output.txt             -> Cluster listings + per-meme reasoning + methodology + pitch
+└── meme_clustering.ipynb  -> Full reproducible pipeline notebook
 ```
 
 ---
