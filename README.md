@@ -229,3 +229,17 @@ A semi-supervised approach where domain experts label a seed set of **50–100 m
 - **Cultural Analytics** — Track the evolution of internet humor across communities and time
 
 ---
+
+## Repository Structure
+```
+Meme Context Clustering
+├── models/ 
+    ├── vectorizer.pkl
+    └── cluster_model.pkl
+├── NOTICE
+├── README.md 
+├── report.txt 
+└── LICENSE 
+```
+
+---
