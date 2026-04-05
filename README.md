@@ -10,11 +10,11 @@ Beneath the humor, irony, and internet slang lies a surprisingly consistent taxo
 
 > *"Meme culture is not noise - it's compressed cultural signal. Our job is to decompress it."*
 
-This submission was built for the **DataSprint Meme Context Clustering Hackathon (PS 2)** hosted by the **Data Science Club, NIST University**. The goal: cluster `5,819` meme descriptions into meaningful, human-interpretable thematic groups - using **no external datasets, no pre-trained models, and no AutoML**.
+The goal: cluster `5,819` meme descriptions into meaningful, human-interpretable thematic groups - using **no external datasets, no pre-trained models, and no AutoML**.
 
 ---
 
-## 1. Dataset Description
+## Dataset Description
 
 The competition dataset comprises 5,819 meme records, each described by three fields.
 
@@ -24,12 +24,12 @@ The competition dataset comprises 5,819 meme records, each described by three fi
 | `input` | String | Textual description of the meme → includes caption, scene context, poster intent, and entity mapping |
 | `url` | String | Source image link, used as a secondary contextual signal |
 
-<br>
+
 The primary analytical signal is the `input` column. Each entry follows an implicit structure of the form: **caption → scene description → poster intent → entity mapping**  providing multi-layered semantic information within a single text field. The `url` column was used supplementarily to extract domain-level metadata that could hint at community context.
 
 ---
 
-## 2. Technical Pipeline (Methodology)
+## Technical Pipeline (Methodology)
 
 ###  Pipeline Overview (TL;DR)
 
@@ -109,7 +109,6 @@ K-Means clustering was applied to the L2-normalized LSA vectors with K = 7, usin
 | K-Means | Centroid-based | n_init = 20, seed = 42 |
 | Agglomerative | Hierarchical | Ward linkage |
 
-<br>
 Using two fundamentally different algorithms (*centroid-based* vs *hierarchical*) and measuring their agreement via **Adjusted Rand Index (ARI)** provides a strong statistical argument that the discovered clusters are **real structure**, not noise.
 
 ### e) Visualization
@@ -141,7 +140,6 @@ Seven thematic clusters were identified, each with a human-assigned label ground
 | 6 | **Pop Culture & Entertainment** | `movie`, `character`, `scene`, `reference` | 181 |
 | 7 | **Animals & Pet Behavior** | `cat`, `dog`, `pet`, `animal` | 1376 |
 
-<br>
 All cluster labels emerged organically from keyword convergence and content inspection (no labels were pre-defined)
 
 ---
